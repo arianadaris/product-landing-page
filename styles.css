@@ -1,0 +1,378 @@
+/* Variables */
+:root
+{
+    --green: #c3dac3;
+    --yellow: #ffbe0a;
+    --orange-yellow: #f4830c;
+    --lighter-blue: #e5eaec;
+    --light-blue: #cbd5d9;
+    --blue: #64818d;
+    --dark-blue: #305767;
+}
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'detail-font';
+    src: url('assets/fonts/Amalfi\ Coast.ttf');
+}
+
+@font-face {
+    font-family: 'accent-font';
+    src: url('assets/fonts/MADE\ Sunflower\ PERSONAL\ USE.otf');
+}
+
+@font-face {
+    font-family: 'main-font';
+    src: url('assets/fonts/Times\ New\ Normal\ Regular.ttf');
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px)
+{
+    body 
+    {
+      background-color: lightblue;
+    }
+  }
+
+/* HTML */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    background-attachment: fixed;
+    background-image: linear-gradient(0deg, var(--lighter-blue), var(--light-blue));
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Header */
+#header
+{
+    color: var(--dark-blue);
+    background-color: var(--lighter-blue);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    position: fixed;
+    top: 0px;
+}
+
+#header-nav, #header-name
+{
+    width: 100%;
+    padding: 20px;
+    display: inline-block;
+}
+
+#header-img
+{
+    width: 130px;
+    display: inline-block;
+    justify-content: center;
+    margin-bottom: -10px;
+}
+
+#header-name
+{
+    font-family: 'detail-font';
+    font-size: 35px;
+    width: auto;
+    margin-left: 40px;
+}
+
+#header-nav
+{
+    margin-top: -10px;
+}
+
+#header-nav a
+{
+    font-family: 'main-font';
+    font-size: 22px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 20px;
+    padding: 10px;
+    width: auto;
+    position: relative;
+}
+
+a.nav-link:before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--orange-yellow);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+a.nav-link:hover
+{
+    color: var(--orange-yellow);
+}
+
+a.nav-link:hover:before
+{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Main CSS */
+#container
+{
+    vertical-align: center;
+    margin-top: 25vh;
+}
+
+/* Intro */
+#container
+{
+    vertical-align: center;
+}
+
+#intro h1, #email h2
+{
+    font-family: 'accent-font';
+    font-size: 40px;
+    color: var(--dark-blue);
+    margin-top: 50px;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+#intro-p
+{
+    font-family: 'main-font';
+    font-size: 25px;
+    text-align: center;
+    width: 80%;
+    padding: 25px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.075);
+    border-radius: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#video
+{
+    border-radius: 2%;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.075);
+    margin-top: 20px;
+    padding: 15px;
+    height: 50vh;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Email */
+#enter-email h2
+{
+    font-size: 35px;
+    font-family: 'main-font';
+    font-weight: bold;
+    color: var(--blue);
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+#email, #submit
+{
+    font-size: 15px;
+    width: auto;
+    height: 5vh;
+    border-radius: 2%;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.075);
+}
+
+#email
+{
+    background-color: var(--lighter-blue);
+    padding-left: 10px;
+    border: none;
+    width: 15%;
+}
+
+#submit
+{
+    font-family: 'accent-font';
+    color: var(--dark-blue);
+    background-color: var(--green);
+    border: none;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+/* Features */
+#features
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#feat
+{
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.075);
+    border-radius: 3%;
+    padding: 20px;
+    margin-right: 25px;
+    margin-bottom: 35px;
+}
+
+#title
+{
+    font-family: 'accent-font';
+    font-size: 40px;
+    color: var(--dark-blue);
+    text-align: center;
+    padding: 10px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+#features h1
+{
+    font-family: 'main-font';
+    color: var(--dark-blue);
+    font-size: 30px;
+}
+
+#feat-list
+{
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-left: 5%;
+    text-align: left;
+    list-style: disc;
+    list-style-position: inside;
+    margin-bottom: 10px;
+}
+
+/* Pricing */
+#pricing
+{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+#price
+{
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.075);
+    border-radius: 3%;
+    width: 35%;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#price h1, h3
+{
+    font-family: 'main-font';
+    color: var(--dark-blue);
+    border-radius: 3%;
+    text-align: center;
+    padding: 10px;
+}
+
+#price h1
+{
+    margin-bottom: -20px;
+}
+
+#price h3
+{
+    color: var(--blue);
+    font-size: 15px;
+}
+
+/* Contact */
+#icons
+{
+    color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+}
+
+#icons a
+{
+    font-size: 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50%;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#icons a .fab
+{
+    position: relative;
+    z-index: 10;
+    transition: color 0.5s;
+}
+
+#icons a::after
+{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(-60deg, var(--orange-yellow), var(--yellow));
+    position: absolute;
+    transition: 0.5s;
+}
+
+#icons a:hover::after
+{
+    top: 0px;
+}
+
+#icon a:hover .fab
+{
+    color: white;
+}
